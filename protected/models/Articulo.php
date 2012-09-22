@@ -69,7 +69,7 @@ class Articulo extends CActiveRecord
 			'Nombre' => 'Nombre',
 			'Descripcion' => 'Descripcion',
 			'Fecha_Vigencia' => 'Fecha Vigencia',
-			'T_Articulo_ID' => 'T Articulo',
+			'T_Articulo_ID' => 'Codigo Articulo',
 		);
 	}
 

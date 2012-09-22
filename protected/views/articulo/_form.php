@@ -5,7 +5,7 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note">Campos con <span class="required">*</span> son obligatorios.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
@@ -23,13 +23,25 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'Fecha_Vigencia'); ?>
-		<?php echo $form->textField($model,'Fecha_Vigencia'); ?>
+		<?php #echo $form->textField($model,'Fecha_Vigencia'); 
+			$this->widget('zii.widgets.jui.CJuiDatePicker', array(
+    		'model'=> $model,
+    		'attribute' => 'Fecha_Vigencia',
+    		'options'=>array(
+        	'dateFormat'=>'yy-mm-dd',
+        	'constrainInput'=>'false',
+        	'showAnim'=>'slide',
+        
+    ),
+    
+));
+
+		
+		?>
 		<?php echo $form->error($model,'Fecha_Vigencia'); ?>
 	</div>
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
-	</div>
+	<input class="btn btn-primary" type="submit" name="yt1" value="Agregar"; Submit>
 
 <?php $this->endWidget(); ?>
 

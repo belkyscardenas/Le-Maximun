@@ -2,14 +2,14 @@
 $this->breadcrumbs=array(
 	'Articulos'=>array('index'),
 	$model->T_Articulo_ID=>array('view','id'=>$model->T_Articulo_ID),
-	'Update',
+	'Editar',
 );
 
 $this->menu=array(
-	array('label'=>'List Articulo', 'url'=>array('index')),
-	array('label'=>'Create Articulo', 'url'=>array('create')),
-	array('label'=>'View Articulo', 'url'=>array('view', 'id'=>$model->T_Articulo_ID)),
-	array('label'=>'Manage Articulo', 'url'=>array('admin')),
+	array('label'=>'Lista Articulos', 'url'=>array('index')),
+	array('label'=>'Agregar Articulo', 'url'=>array('create')),
+	array('label'=>'Ver Articulo', 'url'=>array('view', 'id'=>$model->T_Articulo_ID)),
+	array('label'=>'Administrar Articulo', 'url'=>array('admin')),
 );
 ?>
 

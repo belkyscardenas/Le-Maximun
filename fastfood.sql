@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 22-09-2012 a las 21:42:39
+-- Tiempo de generación: 22-09-2012 a las 22:26:46
 -- Versión del servidor: 5.5.8
 -- Versión de PHP: 5.3.5
 
@@ -69,12 +69,14 @@ CREATE TABLE IF NOT EXISTS `t_articulo_plato` (
   PRIMARY KEY (`T_ArtPlato_ID`),
   KEY `fk_T_Articulo_has_T_Menu_T_Menu1` (`T_Menu_T_Menu_ID`),
   KEY `fk_T_Articulo_has_T_Menu_T_Articulo1` (`T_Articulo_T_Articulo_ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
 -- Volcar la base de datos para la tabla `t_articulo_plato`
 --
 
+INSERT INTO `t_articulo_plato` (`T_Articulo_T_Articulo_ID`, `T_Menu_T_Menu_ID`, `T_ArtPlato_ID`, `Descripcion`, `Cant_Articulo`) VALUES
+(14, 1, 1, 'servilleta para limpiar', '3');
 
 -- --------------------------------------------------------
 
@@ -265,12 +267,15 @@ CREATE TABLE IF NOT EXISTS `t_receta` (
   PRIMARY KEY (`T_Receta_id`),
   KEY `TC_T_Receta7` (`T_Plato_ID`),
   KEY `TC_T_Receta6` (`T_Ingrediente_ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Volcar la base de datos para la tabla `t_receta`
 --
 
+INSERT INTO `t_receta` (`T_Receta_id`, `Descripcion`, `Cant_Ingrediente`, `T_Ingrediente_ID`, `T_Plato_ID`) VALUES
+(2, 'se frien en el aceite', 200, 1, 47),
+(3, 'aceite para freir papas', 500, 2, 47);
 
 --
 -- Filtros para las tablas descargadas (dump)

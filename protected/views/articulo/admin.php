@@ -1,12 +1,12 @@
 <?php
 $this->breadcrumbs=array(
 	'Articulos'=>array('index'),
-	'Manage',
+	'Administrar',
 );
 
 $this->menu=array(
-	array('label'=>'List Articulo', 'url'=>array('index')),
-	array('label'=>'Create Articulo', 'url'=>array('create')),
+	array('label'=>'Lista Articulos', 'url'=>array('index')),
+	array('label'=>'Agregar Articulo', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
