@@ -9,7 +9,7 @@ Le-Maximun
 
 2. Crear una nueva base de datos en phpmyadmn que se llame "fastfood" e importar el script fastfood.sql
 
-3. Obviamente tener instalado yii y todo debería funcionar al ingresar a [localhost/Le-Maximun](localhost/Le-Maximun)
+3. Obviamente tener instalado yii y todo debería funcionar al ingresar a [http://localhost/Le-Maximun](http://localhost/Le-Maximun)
 
 ## Datos adicionales
 
