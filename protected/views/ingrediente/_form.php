@@ -17,7 +17,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'Unidad'); ?>
-		<?php echo $form->textField($model,'Unidad',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->dropDownList($model,'Unidad',array('empty'=>'Seleccione tipo de Unidad','Gr'=>'Gramos','KG'=>'Kilogramos')); ?>
 		<?php echo $form->error($model,'Unidad'); ?>
 	</div>
 
@@ -29,13 +29,15 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'Estado'); ?>
-		<?php echo $form->textField($model,'Estado'); ?>
+		<?php echo $form->dropDownList($model,'Estado',array(''=>'','0'=>'Mal Estado','1'=>'Buen Estado')); ?>
 		<?php echo $form->error($model,'Estado'); ?>
 	</div>
 
-	<div class="row buttons">
+	
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
-	</div>
+
+		<button class="btn btn-large btn-primary" type="button">Large button</button>
+	
 
 <?php $this->endWidget(); ?>
 
