@@ -1,15 +1,15 @@
 <?php
 $this->breadcrumbs=array(
 	'Ingredientes'=>array('index'),
-	'Create',
+	'Agregar',
 );
 
 $this->menu=array(
-	array('label'=>'List Ingrediente', 'url'=>array('index')),
-	array('label'=>'Manage Ingrediente', 'url'=>array('admin')),
+	array('label'=>'Lista de Ingrediente', 'url'=>array('index')),
+	array('label'=>'Administrar Ingredientes', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Ingrediente</h1>
+<h1>Creacion de Ingredientes</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

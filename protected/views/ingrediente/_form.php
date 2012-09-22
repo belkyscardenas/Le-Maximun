@@ -5,7 +5,7 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note">Campos con <span class="required">*</span> son obligatorios.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
@@ -34,9 +34,8 @@
 	</div>
 
 	
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+	<input class="btn btn-primary" type="submit" name="yt1" value="Agregar"; Submit>
 
-		<button class="btn btn-large btn-primary" type="button">Large button</button>
 	
 
 <?php $this->endWidget(); ?>

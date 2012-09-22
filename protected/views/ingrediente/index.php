@@ -4,8 +4,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Ingrediente', 'url'=>array('create')),
-	array('label'=>'Manage Ingrediente', 'url'=>array('admin')),
+	array('label'=>'Agregar Ingrediente', 'url'=>array('create')),
+	array('label'=>'Administrar Ingrediente', 'url'=>array('admin')),
 );
 ?>
 

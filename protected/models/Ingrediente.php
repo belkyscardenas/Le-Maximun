@@ -41,10 +41,10 @@ class Ingrediente extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('Nombre, Unidad, Precio_Unitario, Estado', 'required'),
+			array('Nombre, Unidad, Precio_Unitario, Estado', 'required', 'message'=> 'El campo {attribute} no puede estar vacio'),
 			array('Estado', 'numerical', 'integerOnly'=>true),
-			array('Precio_Unitario', 'numerical'),
-			array('Nombre, Unidad', 'length', 'max'=>255),
+			array('Precio_Unitario', 'numerical','message'=>'Precio Unitario no puede estar vacio'),
+			array('Nombre, Unidad', 'length', 'max'=>255, 'message'=>'Unidad no puede estar vacio'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('Nombre, Unidad, Precio_Unitario, Estado, T_Ingrediente_ID', 'safe', 'on'=>'search'),
@@ -70,10 +70,11 @@ class Ingrediente extends CActiveRecord
 	{
 		return array(
 			'Nombre' => 'Nombre',
-			'Unidad' => 'Unidad',
+			'Unidad' => 'Unidad de Almacenamiento',
 			'Precio_Unitario' => 'Precio Unitario',
 			'Estado' => 'Estado',
-			'T_Ingrediente_ID' => 'T Ingrediente',
+			'T_Ingrediente_ID' => 'Codigo Ingrediente',
+
 		);
 	}
 
@@ -97,5 +98,10 @@ class Ingrediente extends CActiveRecord
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
+	}
+
+	public function nombre_estado(){
+
+		return $this->Estado==1?"Buen Estado":"Mal Estado";
 	}
 }

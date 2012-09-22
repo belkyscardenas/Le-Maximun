@@ -5,11 +5,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Ingrediente', 'url'=>array('index')),
-	array('label'=>'Create Ingrediente', 'url'=>array('create')),
-	array('label'=>'Update Ingrediente', 'url'=>array('update', 'id'=>$model->T_Ingrediente_ID)),
-	array('label'=>'Delete Ingrediente', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->T_Ingrediente_ID),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Ingrediente', 'url'=>array('admin')),
+	array('label'=>'Lista Ingredientes', 'url'=>array('index')),
+	array('label'=>'Agregar Ingrediente', 'url'=>array('create')),
+	array('label'=>'Editar Ingrediente', 'url'=>array('update', 'id'=>$model->T_Ingrediente_ID)),
+	array('label'=>'Eliminar Ingrediente', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->T_Ingrediente_ID),'confirm'=>'Estas seguro que quieres eliminar este elemento?')),
+	array('label'=>'Administrar Ingrediente', 'url'=>array('admin')),
 );
 ?>
 
